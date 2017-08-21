@@ -38,7 +38,11 @@ a=((Conc-Conclow)/(Conchigh-Conclow))*(AQIhigh-AQIlow)+AQIlow;
 linear=Math.round(a);
 return linear;
 }
+    
 
+/////////////
+/////////////
+//US
     
 function AQIPM10US(Concentration)
 {
@@ -81,7 +85,7 @@ else
 return AQI;
 }
     
-
+    
 function AQICategoryUS(AQIndex)
 {
 var AQI=parseFloat(AQIndex)
@@ -121,6 +125,97 @@ else
 return AQICategoryUS;
 }
 
+/////////////
+/////////////
+    
+/////////////
+/////////////
+//IND
+    
+function AQIPM10US(Concentration)
+{
+var Conc=parseFloat(Concentration);
+var c;
+var AQI;
+c=Math.floor(Conc);
+if (c>=0 && c<55)
+{
+	AQI=Linear(50,0,54,0,c);
+}
+else if (c>=55 && c<155)
+{
+	AQI=Linear(100,51,154,55,c);
+}
+else if (c>=155 && c<255)
+{
+	AQI=Linear(150,101,254,155,c);
+}
+else if (c>=255 && c<355)
+{
+	AQI=Linear(200,151,354,255,c);
+}
+else if (c>=355 && c<425)
+{
+	AQI=Linear(300,201,424,355,c);
+}
+else if (c>=425 && c<505)
+{
+	AQI=Linear(400,301,504,425,c);
+}
+else if (c>=505 && c<605)
+{
+	AQI=Linear(500,401,604,505,c);
+}
+else
+{
+	AQI="Out of Range";
+}
+return AQI;
+}
+    
+    
+function AQICategoryUS(AQIndex)
+{
+var AQI=parseFloat(AQIndex)
+var AQICategoryUS;
+if (AQI<=50)
+{
+	AQICategoryUS="Good";
+}
+else if (AQI>50 && AQI<=100)
+{
+	AQICategoryUS="Moderate";
+}
+else if (AQI>100 && AQI<=150)
+{
+	AQICategoryUS="Unhealthy for Sensitive Groups";
+}
+else if (AQI>150 && AQI<=200)
+{
+	AQICategoryUS="Unhealthy";
+}
+else if (AQI>200 && AQI<=300)
+{
+	AQICategoryUS="Very Unhealthy";
+}
+else if (AQI>300 && AQI<=400)
+{
+	AQICategoryUS="Hazardous";
+}
+else if (AQI>400 && AQI<=500)
+{
+	AQICategoryUS="Hazardous";
+}
+else
+{
+	AQICategoryUS="Out of Range";
+}
+return AQICategoryUS;
+}
+
+/////////////
+/////////////
+    
 
 function AQICalc(form)
 {
@@ -134,7 +229,7 @@ f=document.form.inputbox.value
 f=f.replace(/\,/,'');
 
 
-	b=AQIPM10US(f);	
+	b1=AQIPM10US(f);	
 
 if (b == "Out of Range")
 {
@@ -191,42 +286,9 @@ else
 return true;
 }
 
-</script>
 
-
-
- <div id="content">
- <!-- BEGIN CONTENT AREA -->
-   <div id="pageContent">
-    <h1>AQI Calculator: Concentration to AQI- PM10</h1> 
-     
-  </div>
-<form name="form" id="form">
-               
-  <table style="padding-bottom:5px">
-  
-
-  
-  <tbody>
-  <tr>
-    <th colspan="0">
-      <center>Enter the Concentration:</center></th>
-    <td>
-      <center>
-        <input size="3" name="inputbox" style="text-align: center; background-color: white;" value="78"></center></td>
-    <th>
-      <center>
-       <input onclick="return AQICalc(form);" size="10" value="Calculate" name="Calculate" type="button"> </center></th>
-    <th>
-    <center>
-    <input onclick="return ClearColor()" value="Reset" name="reset" type="reset"></center></th></tr></tbody></table>
-	
- <table style="padding-bottom:5px">
-   <tbody>
-  </tbody>
-   <tbody><tr>
-    <td></td></tr></tbody>
-  <tbody>
+<table style="padding-bottom:5px">
+<tbody>
     <tr>
         <th>India</th>
         <th>China</th>  
@@ -366,8 +428,42 @@ return true;
         <input size="10" name="outputbox3m" style="background-color: rgb(0, 228, 0); text-align: center; color: black;" ></center></td>
       <td>
   </tr>
-     </tbody>
-    </table>
+  </tbody>
+  </table>
+
+
+
+</script>
+
+
+
+ <div id="content">
+ <!-- BEGIN CONTENT AREA -->
+   <div id="pageContent">
+    <h1>AQI Calculator: Concentration to AQI- PM10</h1> 
+     
+  </div>
+<form name="form" id="form">
+               
+  <table style="padding-bottom:5px">
+  
+
+  
+  <tbody>
+  <tr>
+    <th colspan="0">
+      <center>Enter the Concentration:</center></th>
+    <td>
+      <center>
+        <input size="3" name="inputbox" style="text-align: center; background-color: white;" value="78"></center></td>
+    <th>
+      <center>
+       <input onclick="return AQICalc(form);" size="10" value="Calculate" name="Calculate" type="button"> </center></th>
+    <th>
+    <center>
+    <input onclick="return ClearColor()" value="Reset" name="reset" type="reset"></center></th></tr></tbody></table>
+	
+ 
 </form>
 
 

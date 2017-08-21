@@ -3,7 +3,7 @@
 1,a,IND,PM10,150,101,149,100,Medium,#ffff00
 1,a,IND,PM10,350,151,349,150,Poor,#00b0f0
 1,a,IND,PM10,420,351,419,350,Very Poor,#0000cc
-1,a,IND,PM10,999,421,999,420,Severe,#ff0000
+1,a,IND,PM10,500,421,999,420,Severe,#ff0000
 13,m,US,PM10,50,0,54,0,Good,#00b050
 13,m,US,PM10,100,51,154,55,Moderate,#ffff00
 13,m,US,PM10,150,101,254,155,Unhealthy for sensitive Groups,#fc8004
@@ -33,7 +33,7 @@
 5,e,IDN,PM10,250,101,199,101,Unfair,#ffff00
 5,e,IDN,PM10,350,251,299,201,Very Unfair,#ff0000
 5,e,IDN,PM10,430,351,399,301,Dangerous,#00000
-5,e,IDN,PM10,999,431,999,401,Dangerous,#00000
+5,e,IDN,PM10,500,431,999,401,Dangerous,#00000
 6,f,KR,PM10,30,0,49,0,Good,#0000ff
 6,f,KR,PM10,80,31,99,51,Moderate,#00b050
 6,f,KR,PM10,120,81,149,101,Unhealthy for Sensitive Groups,#ffff00
@@ -50,23 +50,23 @@
 8,h,MY,PM10,150,51,149,50,Moderate,#00b050
 8,h,MY,PM10,350,151,349,150,Unhealthy,#ffff00
 8,h,MY,PM10,420,351,419,350,Very Unhealthy,#dd5800
-8,h,MY,PM10,999,421,999,420,Hazardous,#ff0000
+8,h,MY,PM10,500,421,999,420,Hazardous,#ff0000
 9,I,PH,PM10,54,0,49,0,Good,#ffffff
 9,I,PH,PM10,154,55,149,50,Fair,#ffffff
 9,I,PH,PM10,254,155,254,150,Unhealthy for sensitive groups,#ffffff
 9,I,PH,PM10,354,255,354,255,Very Unhealthy,#ffffff
 9,I,PH,PM10,424,355,424,355,Accutely Unhealthy,#ffffff
-9,I,PH,PM10,999,425,999,425,Emergency,#ffffff
+9,I,PH,PM10,500,425,999,425,Emergency,#ffffff
 10,j,SG,PM10,50,0,49,0,Good,#00b050
 10,j,SG,PM10,150,51,139,50,Moderate,#0070c0
 10,j,SG,PM10,350,151,349,140,Unhealthy,#ffff00
 10,j,SG,PM10,420,351,419,350,Very Unhealthy,#fc8004
-10,j,SG,PM10,999,421,999,420,Hazardous,#ff0000
+10,j,SG,PM10,500,421,999,420,Hazardous,#ff0000
 11,k,TH,PM10,40,0,39,0,Good,#66ffcc
 11,k,TH,PM10,120,41,119,40,Moderate,#00b050
 11,k,TH,PM10,350,121,349,120,Unhealthy,#ffff00
 11,k,TH,PM10,420,351,419,350,Very Unhealthful,#fc8004
-11,k,TH,PM10,999,421,999,420,Hazardous,#ff0000
+11,k,TH,PM10,500,421,999,420,Hazardous,#ff0000
 12,l,UK,PM10,1,0,16,0,Low,#99ff99
 12,l,UK,PM10,2,1,33,17,Low,#00ff00
 12,l,UK,PM10,3,2,50,34,Low,#54bc2a
@@ -96,18 +96,18 @@
 2,b,CN,PM25,150,116,159,115,Medially Polluted,#ff0000
 2,b,CN,PM25,250,151,249,160,Heavily Polluted,#800080
 2,b,CN,PM25,350,251,349,240,Severely Polluted,#96001d
-2,b,CN,PM25,999,351,999,350,Severely Polluted,#96001d
+2,b,CN,PM25,500,351,999,350,Severely Polluted,#96001d
 3,c,EU,PM25,10,0,19,0,Very Low,#96001d
 3,c,EU,PM25,20,11,29,20,Low,#99ff33
 3,c,EU,PM25,30,21,39,30,Medium,#ffff00
 3,c,EU,PM25,60,31,59,40,High,#fc8004
-3,c,EU,PM25,999,61,999,60,Very High,#a20000
+3,c,EU,PM25,100,61,999,60,Very High,#a20000
 14,d,JP,PM25,10,0,19,0,,#0070c0
 14,d,JP,PM25,15,11,29,20,,#00b0f0
 14,d,JP,PM25,35,16,39,30,,#08f963
 14,d,JP,PM25,50,36,49,40,,#ffff00
 14,d,JP,PM25,70,51,69,50,,#ff9900
-14,d,JP,PM25,999,71,999,70,,#ff3300
+14,d,JP,PM25,100,71,999,70,,#ff3300
 7,g,LK,PM25,12,0,19,0,Good,#00b050
 7,g,LK,PM25,34.4,13,49,20,Moderate,#ffff00
 7,g,LK,PM25,55.4,34.5,79,50,Unhealthy for sensitive Groups,#ff66ff
@@ -117,7 +117,7 @@
 12,l,UK,PM25,23,0,22,0,Low,#08ff08
 12,l,UK,PM25,53,24,52,23,Moderate,#ffc000
 12,l,UK,PM25,70,54,69,53,High,#a20000
-12,l,UK,PM25,999,71,999,70,Very High,#cc00ff
+12,l,UK,PM25,100,71,999,70,Very High,#cc00ff
 1,a,IND,SO2,50,0,40,0,Good,#00b050
 1,a,IND,SO2,100,51,80,41,Medium,#ffff00
 1,a,IND,SO2,200,101,380,81,Poor,#00b0f0
