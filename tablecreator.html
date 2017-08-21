@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type='text/javascript'
+  src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+<!--from   w ww .java  2 s  .  c o  m-->
+
+$("input:radio-group").click(function() {
+    if ($(this).is(":checked")) {
+        var group = "input:radio-group[name='" + $(this).attr("name") + "']";
+        $(group).prop("checked", false);
+        $(this).prop("checked", true);
+    } else {
+        $(this).prop("checked", false);
+    }
+});
+
+</script>  
+</head>
+  <body style='margin:30px'>
+    <div class="radio-group">
+        <label  class="radio">
+            <input  name="fooby[1][]" type="checkbox"> PM2.5
+        </label>
+        <label class="radio">
+            <input  name="fooby[1][]" type="checkbox"> PM10
+        </label>
+        <label  class="radio">
+            <input  name="fooby[1][]" type="checkbox"> SO2
+        </label>
+	<label  class="radio">
+            <input  name="fooby[1][]" type="checkbox"> NO2
+        </label>
+    </div>
+  </body>
+</html>
