@@ -22,46 +22,46 @@ linear=Math.round(a);
 return linear;
 }
 
-function AQIPM10US(Concentration)
-{
-var Conc=parseFloat(Concentration);
-var c;
-var AQI;
-c=Math.floor(Conc);
-if (c>=0 && c<55)
-{
-	AQI=Linear(50,0,54,0,c);
-}
-else if (c>=55 && c<155)
-{
-	AQI=Linear(100,51,154,55,c);
-}
-else if (c>=155 && c<255)
-{
-	AQI=Linear(150,101,254,155,c);
-}
-else if (c>=255 && c<355)
-{
-	AQI=Linear(200,151,354,255,c);
-}
-else if (c>=355 && c<425)
-{
-	AQI=Linear(300,201,424,355,c);
-}
-else if (c>=425 && c<505)
-{
-	AQI=Linear(400,301,504,425,c);
-}
-else if (c>=505 && c<605)
-{
-	AQI=Linear(500,401,604,505,c);
-}
-else
-{
-	AQI="Out of Range";
-}
-return AQI;
-}
+function AQIPM10US(Concentration) 
+ { 
+ var Conc=parseFloat(Concentration); 
+ var c; 
+ var AQI; 
+ c=Math.floor(Conc);           
+ if (c>=0.0 && c<54.0) 
+ { 
+ AQI=Linear(50.0,0.0,54.0,0.0,c); 
+ } 
+else if (c>=55.0 && c<154.0) 
+ { 
+ AQI=Linear(100.0,51.0,154.0,55.0,c); 
+ } 
+ else if (c>=155.0 && c<254.0) 
+ { 
+ AQI=Linear(150.0,101.0,254.0,155.0,c); 
+ } 
+ else if (c>=255.0 && c<354.0) 
+ { 
+ AQI=Linear(200.0,151.0,354.0,255.0,c); 
+ } 
+ else if (c>=355.0 && c<424.0) 
+ { 
+ AQI=Linear(300.0,201.0,424.0,355.0,c); 
+ } 
+ else if (c>=425.0 && c<504.0) 
+ { 
+ AQI=Linear(400.0,301.0,504.0,425.0,c); 
+ } 
+ else if (c>=505.0 && c<604.0) 
+ { 
+ AQI=Linear(500.0,401.0,604.0,505.0,c); 
+ } 
+ else 
+ { 
+ AQI="Out of Range"; 
+ } 
+ return AQI; 
+ }
     
     
 function AQICategoryUS(AQIndex)
@@ -153,5 +153,60 @@ return true;
 }
 
 
+function appendRow1() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+
+        row.insertCell(0).innerHTML = b1;
+        row.insertCell(1).innerHTML = AQICategoryUS(b1);
+         
+
+
+}
+
+return true;
+        
+
+}
+
+function appendRow2() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+
+	row.insertCell(0).innerHTML = "i want to change my cell color";
+        row.insertCell(1).style.backgroundColor = "yellow";   
+         
+
+
+}
+
+return true;
+        
+
+}
 
 
