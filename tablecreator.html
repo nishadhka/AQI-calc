@@ -34,7 +34,10 @@
 <script>
 
 var chosen
-$(document).ready(function(e){    
+
+$(document).ready(function(e){  
+chosen=$('input[name=optradio]:checked').val()
+
 $("input[name=optradio]:radio").click(function () {
 chosen=$('input[name=optradio]:checked').val()
 
@@ -44,24 +47,7 @@ chosen=$('input[name=optradio]:checked').val()
 
 function calculate() {    
 
-var chos
-
-chos=chosen
-
-if (chos="chosen1"){
-console.log(chos);
-}
-
-else if (chos="chosen2"){
-console.log(chos);
-}
-
-else if (chos="chosen3"){
-console.log(chos);
-}
-else {
-console.log(chos);
-}
+console.log(chosen)
 
 }
 
@@ -81,16 +67,16 @@ Table.innerHTML = "";
 <form>
 <div class="btn-group" data-toggle="buttons-radio">
 <label class="radio-inline">
-<input id= "rectButton" type="radio" value="chosen1" name="optradio">PM2.5
+<input id= "rectButton" type="radio" value="1" name="optradio">PM2.5
 </label>
 <label class="radio-inline">
-<input id= "rectButton1" type="radio" value="chosen2" name="optradio">PM10
+<input id= "rectButton1" type="radio" value="2" name="optradio">PM10
 </label>
 <label class="radio-inline">
-<input id= "rectButton2" type="radio" value="chosen3" name="optradio">NO2
+<input id= "rectButton2" type="radio" value="3" name="optradio">NO2
 </label>
-<label class="radio-inline  active">
-<input id= "rectButton3" type="radio" checked="" value="chosen4" name="optradio">SO2
+<label class="radio-inline active">
+<input checked id= "rectButton3" type="radio" value="4" name="optradio">SO2
 </label>
 </div>
 </form>
