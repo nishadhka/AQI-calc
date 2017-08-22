@@ -34,21 +34,22 @@
 <script>
 
 var chosen
-
 $(document).ready(function(e){  
 chosen=$('input[name=optradio]:checked').val()
-
 $("input[name=optradio]:radio").click(function () {
 chosen=$('input[name=optradio]:checked').val()
+});
+});
 
-//myFunction()
-});
-});
+
+
 
 function calculate() {    
 
-console.log(chosen)
+if (chosen ==2){
 
+console.log(chosen)
+}
 }
 
 
