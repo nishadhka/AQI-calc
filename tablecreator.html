@@ -33,40 +33,26 @@
 
 <script>
 
-var chosen
-$(function(){
-$('#rectButton').on('click', function (e) {
-   chosen="pm25"
-   //console.log(chosen);
+$(function () {
+    $('.showtablePm10').hide();
+    $('.showtablePm25').hide();
+
+    $("input[name=user-type]:radio").click(function () {
+
+        if ($('input[name=user-type]:checked').val() == "chosen1") {
+            $('.showtablePm25').hide();
+            $('.showtablePm10').show();
+            createPm10table()
+
+        } else if ($('input[name=user-type]:checked').val() == "chosen2") {
+            $('.showtablePm25').show();
+            $('.showtablePm10').hide();
+
+        }
+    });
 });
-$('#rectButton1').on('click', function (e) {
-   chosen="pm10"
-   //console.log(chosen);
-});
-$('#rectButton2').on('click', function (e) {
-   chosen="no2"
-   //console.log(chosen);
-});
-$('#rectButton3').on('click', function (e) {
-   chosen="so2"
-   //console.log(chosen);
-});
-});
-//console.log(chosen);
 
 
-
-
-function calculate(chosen)
-{
-console.log(chosen);
-
-if (chosen="pm10")
-{
-createPm10table()
-}
-
-}
 
 function removeTable()
 {
@@ -82,16 +68,16 @@ Table.innerHTML = "";
 <form>
 <div class="btn-group" data-toggle="buttons-radio">
 <label class="radio-inline">
-<input id= "rectButton" type="radio" name="optradio">PM2.5
+<input id= "rectButton" type="radio" value="chosen1" name="optradio">PM2.5
 </label>
 <label class="radio-inline">
-<input id= "rectButton1" type="radio" name="optradio">PM10
+<input id= "rectButton1" type="radio" value="chosen2" name="optradio">PM10
 </label>
 <label class="radio-inline">
-<input id= "rectButton2" type="radio" name="optradio">NO2
+<input id= "rectButton2" type="radio" value="chosen2" name="optradio">NO2
 </label>
 <label class="radio-inline  active">
-<input id= "rectButton3" type="radio" checked="" name="optradio">SO2
+<input id= "rectButton3" type="radio" checked="" value="chosen2" name="optradio">SO2
 </label>
 </div>
 </form>
@@ -115,7 +101,10 @@ Table.innerHTML = "";
 </form>
 </div>
 
-<div id="tablePrint"> </div>
+<div class="showtablePm10" id="tablePrint1"> </div>
+<div class="showtablePm25" id="tablePrint2"> </div>
+<div class="showtableSo2" id="tablePrint3"> </div>
+<div class="showtableNo2" id="tablePrint4"> </div>
 
 </body>
 </html>
