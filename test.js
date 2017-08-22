@@ -1,29 +1,146 @@
-function create() {
-                var myArray    = new Array();
-    myArray[0] = 1;
-    myArray[1] = 2.218;
-    myArray[2] = 33;
-    myArray[3] = 114.94;
-    myArray[4] = 5;
-    myArray[5] = 33;
-    myArray[6] = 114.980;
-    myArray[7] = 5;
-
-    var myTable= "<table><tr><td style='width: 100px; color: red;'>Col Head 1</td>";
-    myTable+= "<td style='width: 100px; color: red; text-align: right;'>Col Head 2</td>";
-    myTable+="<td style='width: 100px; color: red; text-align: right;'>Col Head 3</td></tr>";
-
-    myTable+="<tr><td style='width: 100px;                   '>---------------</td>";
-    myTable+="<td     style='width: 100px; text-align: right;'>---------------</td>";
-    myTable+="<td     style='width: 100px; text-align: right;'>---------------</td></tr>";
-
-  for (var i=0; i<8; i++) {
-    myTable+="<tr><td style='width: 100px;'>Number " + i + " is:</td>";
-    myArray[i] = myArray[i].toFixed(3);
-    myTable+="<td style='width: 100px; text-align: right;'>" + myArray[i] + "</td>";
-    myTable+="<td style='width: 100px; text-align: right;'>" + myArray[i] + "</td></tr>";
-  }  
-   myTable+="</table>";
-
- document.getElementById('tablePrint').innerHTML = myTable;
-            }
+function createTablePm10() {
+    
+var myTable= "<table style='padding-bottom:5px'>";
+myTable+="<tr>"
+myTable+="        <th>India</th>"
+myTable+="        <th>China</th>  "
+myTable+="        <th>EU</th>  "
+myTable+="        <th>Hong Kong</th>  "
+myTable+="        <th>Indonesia</th>  "
+myTable+="        <th>South Korea</th>  "
+myTable+="        <th>Srilanka</th>  "
+myTable+="        <th>Malaysia</th>  "
+myTable+="        <th>Philipens</th>  "
+myTable+="        <th>Singapore</th>  "
+myTable+="        <th>Thailand</th>  "
+myTable+="        <th>UK</th>  "
+myTable+="        <th>US</th>  "
+myTable+="    </tr>"
+myTable+="  <tr>"
+myTable+="    <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1a' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1b' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1c' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1d' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1e' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1f' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1g' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1h' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1i' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1j' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1k' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1l' style='text-align: center;' value='102'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='3' name='outputbox1m' style='text-align: center;' value='102'></center></td>"
+myTable+="  <tr>"
+myTable+="    <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2a' style='text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8'  name='outputbox2b' style='text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2c' style='text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2d' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2e' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2f' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2g' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2h' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2i' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2j' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2k' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2l' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='8' name='outputbox2m' style=' text-align: center; color: black;' value='Good'></center></td>"
+myTable+="      <td>"
+myTable+="  </tr>"
+myTable+="  <tr>"
+myTable+="    <td>"
+myTable+="      <center>"
+myTable+="        <input size='10'  name='outputbox3a' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3b' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3c' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3d' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3e' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3f' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3g' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3h' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3i' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3j' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3k' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3l' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="      <center>"
+myTable+="        <input size='10' name='outputbox3m' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
+myTable+="      <td>"
+myTable+="  </tr>"
+myTable+="  </tbody>"
+myTable+="  </table>"
+document.getElementById('tablePrint').innerHTML = myTable;
+}

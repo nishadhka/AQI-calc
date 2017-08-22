@@ -22,52 +22,106 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="test.js"></script>
+<style>
+           table td, table th  
+            {    
+            max-width:  95px;
+            word-wrap: break-word;
+            }
+</style>
 </head>
 
 <script>
 
+var chosen
 $(function(){
-
 $('#rectButton').on('click', function (e) {
-
-    alert('Hello!');
-
+   chosen="pm25"
+   //console.log(chosen);
 });
-
 $('#rectButton1').on('click', function (e) {
-
-    create();
-    
-
+   chosen="pm10"
+   //console.log(chosen);
+});
+$('#rectButton2').on('click', function (e) {
+   chosen="no2"
+   //console.log(chosen);
+});
+$('#rectButton3').on('click', function (e) {
+   chosen="so2"
+   //console.log(chosen);
+});
 });
 
-  
+function calculate(chosen)
+{
+if (chosen = "pm25")
+{
+	createTablePm10();
+        return AQICalcPm10(form);
+}
+else if (chosen="pm10")
+{
+	createTable();
+        return AQICalc(form);
+}
+else if (chosen="no2")
+{
+	createTable();
+        return AQICalc(form);
+}
+else (chosen="so2")
+{
+	createTable();
+        return AQICalc(form);
+}	
 
-});
+}
+
+
+function removeTable()
+{
+var Table = document.getElementById("tablePrint");
+Table.innerHTML = "";
+}
 
 </script>
 
-
-
-
-
 <div class="container">
-  <h2>Form control: inline radio buttons</h2>
-  <p>The form below contains three inline radio buttons:</p>
-  <form>
-    <label class="radio-inline">
-      <input id= "rectButton" type="radio" name="optradio">PM2.5
-    </label>
-    <label class="radio-inline">
-      <input id= "rectButton1" type="radio" name="optradio">PM10
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">NO2
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">SO2
-    </label>
-  </form>
+<h1>AQI Calculator</h1>
+<p>Choose the variable</p>
+<form>
+<label class="radio-inline">
+<input id= "rectButton" type="radio" name="optradio">PM2.5
+</label>
+<label class="radio-inline">
+<input id= "rectButton1" type="radio" name="optradio">PM10
+</label>
+<label class="radio-inline">
+<input id= "rectButton2" type="radio" name="optradio">NO2
+</label>
+<label class="radio-inline">
+<input id= "rectButton3" type="radio" name="optradio">SO2
+</label>
+</form>
+<form name="form" id="form">
+<table style="padding-bottom:5px">
+<tbody>
+<tr>
+</tr>
+<tr>
+<th colspan="0">
+<center>Enter the Concentration:</center></th>
+<td>
+<center>
+<input size="3" name="inputbox" style="text-align: center; background-color: white;" value="78"></center></td>
+<th>
+<center>
+<input onclick="calculate(chosen)" size="10" value="Calculate" name="Calculate" type="button"> </center></th>
+<th>
+<center>
+<input onclick="removeTable()" value="Reset" name="reset" type="reset"></center></th></tr></tbody></table>
+</form>
 </div>
 
 <div id="tablePrint"> </div>
