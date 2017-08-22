@@ -38,13 +38,6 @@ $(document).ready(function(e){
 chosen=$('input[name=optradio]:checked').val()
 $("input[name=optradio]:radio").click(function () {
 chosen=$('input[name=optradio]:checked').val()
-if (chosen ==2){
-var Table = document.getElementById("tablePrint1");
-Table.innerHTML = "";
-
-createTablePm10()
-}
-
 });
 });
 
@@ -61,7 +54,9 @@ Table.innerHTML = "";
 if (chosen ==2){
 var Table = document.getElementById("tablePrint1");
 Table.innerHTML = "";
-return AQICalcPm10(form)
+createTable()
+AQICalcPm10(form)
+appendRow()
 }
 
 if (chosen ==3){

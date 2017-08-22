@@ -14,7 +14,7 @@
         table.setAttribute("id", "data");
         table.border = '1';
         myTableDiv.appendChild(table);  //appendChild() insert it in the document (table --> myTableDiv)
-        debugger;
+        //debugger;
 
         var header = table.createTHead();
 
@@ -34,12 +34,12 @@
 
 
         var rowCount = table.rows.length;
-        var row = table.insertRow(rowCount);
+        var row = table.insertRow(0);
 
         row.insertCell(0).innerHTML = "Hello";
-        row.insertCell(1).innerHTML = "23";
+        row.insertCell(0).innerHTML = "23";
 
-
+       console.log(row)
 
         clearForm();
 
@@ -48,7 +48,7 @@
 
 
     function clearForm() {
-        debugger;
+        //debugger;
 
         document.myForm.name.value = "";
         document.myForm.password.value = "";

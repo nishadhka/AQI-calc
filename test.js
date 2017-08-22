@@ -1,150 +1,15 @@
-function createTablePm10() {
-    
-var myTable= "<table style='padding-bottom:5px'>";
-myTable+="<tr>"
-myTable+="        <th>India</th>"
-myTable+="        <th>China</th>  "
-myTable+="        <th>EU</th>  "
-myTable+="        <th>Hong Kong</th>  "
-myTable+="        <th>Indonesia</th>  "
-myTable+="        <th>South Korea</th>  "
-myTable+="        <th>Srilanka</th>  "
-myTable+="        <th>Malaysia</th>  "
-myTable+="        <th>Philipens</th>  "
-myTable+="        <th>Singapore</th>  "
-myTable+="        <th>Thailand</th>  "
-myTable+="        <th>UK</th>  "
-myTable+="        <th>US</th>  "
-myTable+="    </tr>"
-myTable+="  <tr>"
-myTable+="    <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1a' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1b' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1c' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1d' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1e' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1f' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1g' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1h' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1i' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1j' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1k' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1l' style='text-align: center;' value='102'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='3' name='outputbox1m' style='text-align: center;' value='102'></center></td>"
-myTable+="  <tr>"
-myTable+="    <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2a' style='text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8'  name='outputbox2b' style='text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2c' style='text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2d' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2e' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2f' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2g' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2h' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2i' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2j' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2k' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2l' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='8' name='outputbox2m' style=' text-align: center; color: black;' value='Good'></center></td>"
-myTable+="      <td>"
-myTable+="  </tr>"
-myTable+="  <tr>"
-myTable+="    <td>"
-myTable+="      <center>"
-myTable+="        <input size='10'  name='outputbox3a' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3b' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3c' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3d' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3e' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3f' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3g' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3h' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3i' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3j' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3k' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3l' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="      <center>"
-myTable+="        <input size='10' name='outputbox3m' style='background-color: rgb(0, 228, 0); text-align: center; color: black;' ></center></td>"
-myTable+="      <td>"
-myTable+="  </tr>"
-myTable+="  </tbody>"
-myTable+="  </table>"
-document.getElementById('tablePrint1').innerHTML = myTable;
+function createTable() {
+        var myTableDiv = document.getElementById("tablePrint1");  //indiv
+        table = document.createElement("TABLE");   //TABLE??
+        table.setAttribute("id", "data");
+        table.border = '1';
+        myTableDiv.appendChild(table);  //appendChild() insert it in the document (table --> myTableDiv)
+        var header = table.createTHead();
 
-console.log("created the table");
+        var th0 = table.tHead.appendChild(document.createElement("th"));
+        th0.innerHTML = "AQI";
+        var th1 = table.tHead.appendChild(document.createElement("th"));
+        th1.innerHTML = "AQI CAT";
 }
 
 function Linear(AQIhigh, AQIlow, Conchigh, Conclow, Concentration)
@@ -238,6 +103,9 @@ else
 return AQICategoryUS;
 }
 
+
+
+var b1;
 function AQICalcPm10(form)
 {
 
@@ -246,14 +114,19 @@ f=document.form.inputbox.value
 f=f.replace(/\,/,'');
 
 console.log(f)
-var b1;
+
 
 document.form.inputbox.style.textAlign="center";
 document.form.inputbox.style.backgroundColor="white";
 b1=AQIPM10US(f);	
-console.log(b1)
+//console.log(b1)
 
-if (b1 == "Out of Range")
+}
+
+
+function appendRow() {
+
+        if (b1 == "Out of Range")
 {
 	alert("The concentration number you've entered is out of range for this pollutant.");
 	document.form.inputbox.value=" ";
@@ -263,98 +136,22 @@ if (b1 == "Out of Range")
 
 else
 {
-	document.tablePrint1.outputbox1a.value=b1;
-	document.form.outputbox2a.value=AQICategoryIND(b1);
-}
-document.form.outputbox1a.style.textAlign="center";
-document.form.outputbox2a.style.textAlign="center";
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
 
-if (document.form.outputbox2a.value == 'Good')
-{
-	document.form.outputbox3a.style.backgroundColor="#00b050";
-	document.form.outputbox3a.style.color="black";
-}
-else if (document.form.outputbox2a.value == 'Medium')
-{
-	document.form.outputbox3a.style.backgroundColor="#ffff00";
-	document.form.outputbox3a.style.color="black";
-}
-else if (document.form.outputbox2a.value == 'Poor')
-{
-	document.form.outputbox3a.style.backgroundColor="#00b0f0";
-	document.form.outputbox3a.style.color="black";
-}
-else if (document.form.outputbox2a.value == 'Very Poor')
-{
-	document.form.outputbox3a.style.backgroundColor="#0000cc";
-	document.form.outputbox3a.style.color="black";
-}
-else if (document.form.outputbox2a.value == 'Severe')
-{
-	document.form.outputbox3a.style.backgroundColor="#ff0000";
-	document.form.outputbox3a.style.color="black";
-}
+        row.insertCell(0).innerHTML = b1;
+        row.insertCell(1).innerHTML = AQICategoryUS(b1);
+         
 
-/////////
-////////
-//US
-var b13;
 
-document.form.inputbox.style.textAlign="center";
-document.form.inputbox.style.backgroundColor="white";
-b13=AQIPM10IND(f);	
-
-if (b13 == "Out of Range")
-{
-	alert("The concentration number you've entered is out of range for this pollutant.");
-	document.form.inputbox.value=" ";
-	document.form.outputbox1m.value=" ";
-	document.form.outputbox2m.value=" ";
-}
-
-else
-{
-	document.form.outputbox1m.value=b13;
-	document.form.outputbox2m.value=AQICategoryUS(b13);
-}
-document.form.outputbox1m.style.textAlign="center";
-document.form.outputbox2m.style.textAlign="center";
-
-if (document.form.outputbox2m.value == 'Good')
-{
-	document.form.outputbox3m.style.backgroundColor="#00e000";
-	document.form.outputbox3m.style.color="black";
-}
-else if (document.form.outputbox2m.value == 'Moderate')
-{
-	document.form.outputbox3m.style.backgroundColor="#ffff00";
-	document.form.outputbox3m.style.color="black";
-}
-else if (document.form.outputbox2m.value == 'Unhealthy for Sensitive Groups')
-{
-	document.form.outputbox3m.style.backgroundColor="#ff7600";
-	document.form.outputbox3m.style.color="black";
-}
-else if (document.form.outputbox2m.value == 'Unhealthy')
-{
-	document.form.outputbox3m.style.backgroundColor="#ff0000";
-	document.form.outputbox3m.style.color="black";
-}
-else if (document.form.outputbox2m.value == 'Very Unhealthy')
-{
-	document.form.outputbox3m.style.backgroundColor="#990049";
-	document.form.outputbox3m.style.color="#ffffff";
-}
-else if (document.form.outputbox2m.value == 'Hazardous')
-{
-	document.form.outputbox3m.style.backgroundColor="#7E0023";
-	document.form.outputbox3m.style.color="#ffffff";
-}
-else
-{
-	document.form.outputbox3m.style.backgroundColor="#ffffff";
-	document.form.outputbox3m.style.color="black";
 }
 
 return true;
+        
+
 }
+
+
+
+
