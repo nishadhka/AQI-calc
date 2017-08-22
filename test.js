@@ -142,5 +142,5 @@ myTable+="      <td>"
 myTable+="  </tr>"
 myTable+="  </tbody>"
 myTable+="  </table>"
-document.getElementById('tablePrint').innerHTML = myTable;
+document.getElementById('tablePrint1').innerHTML = myTable;
 }

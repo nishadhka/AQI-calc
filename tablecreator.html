@@ -44,11 +44,27 @@ chosen=$('input[name=optradio]:checked').val()
 
 
 
-function calculate() {    
+function calculate() {
+
+if (chosen ==1){
+var Table = document.getElementById("tablePrint1");
+Table.innerHTML = "";
+}
 
 if (chosen ==2){
+var Table = document.getElementById("tablePrint1");
+Table.innerHTML = "";
+createPm10table()
+}
 
-console.log(chosen)
+if (chosen ==3){
+var Table = document.getElementById("tablePrint1");
+Table.innerHTML = "";
+}    
+
+if (chosen ==4){
+var Table = document.getElementById("tablePrint1");
+Table.innerHTML = "";
 }
 }
 
@@ -56,7 +72,7 @@ console.log(chosen)
 
 function removeTable()
 {
-var Table = document.getElementById("tablePrint");
+var Table = document.getElementById("tablePrint1");
 Table.innerHTML = "";
 }
 
@@ -102,9 +118,7 @@ Table.innerHTML = "";
 </div>
 
 <div class="showtablePm10" id="tablePrint1"> </div>
-<div class="showtablePm25" id="tablePrint2"> </div>
-<div class="showtableSo2" id="tablePrint3"> </div>
-<div class="showtableNo2" id="tablePrint4"> </div>
+
 
 </body>
 </html>
