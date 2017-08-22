@@ -57,23 +57,23 @@ function calculate(chosen)
 {
 if (chosen = "pm25")
 {
-	createTablePm10();
-        return AQICalcPm10(form);
+	//createTable();
+        //return AQICalcPm25(form);
 }
 else if (chosen="pm10")
 {
-	createTable();
-        return AQICalc(form);
+	createTablePm10()
+        //return AQICalcPm10(form);
 }
 else if (chosen="no2")
 {
-	createTable();
-        return AQICalc(form);
+	///createTable()
+        //return AQICalcNo2(form);
 }
 else (chosen="so2")
 {
-	createTable();
-        return AQICalc(form);
+	//createTable()
+        //return AQICalcSo2(form);
 }	
 
 }
