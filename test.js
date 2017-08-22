@@ -1,4 +1,4 @@
-function createTablePm10() {
+function createPm10table() {
     
 var myTable= "<table style='padding-bottom:5px'>";
 myTable+="<tr>"

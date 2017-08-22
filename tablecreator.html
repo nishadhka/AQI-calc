@@ -33,51 +33,40 @@
 
 <script>
 
-var chosen
-$(function(){
-$('#rectButton').on('click', function (e) {
-   chosen="pm25"
+//var chosen
+//$(function(){
+//$('#rectButton').on('click', function (e) {
+//   chosen="pm25"
    //console.log(chosen);
-});
-$('#rectButton1').on('click', function (e) {
-   chosen="pm10"
+//});
+//$('#rectButton1').on('click', function (e) {
+//   chosen="pm10"
    //console.log(chosen);
-});
-$('#rectButton2').on('click', function (e) {
-   chosen="no2"
+//});
+//$('#rectButton2').on('click', function (e) {
+//   chosen="no2"
    //console.log(chosen);
-});
-$('#rectButton3').on('click', function (e) {
-   chosen="so2"
+//});
+//$('#rectButton3').on('click', function (e) {
+//   chosen="so2"
    //console.log(chosen);
-});
+//});
+//});
+
+
+
+
+
+function calculate()
+{
+var num;
+$(".btn-group > button.btn").on("click", function(){
+    num = +this.innerHTML;
+    //alert("Value is " + num);
 });
 
-function calculate(chosen)
-{
-if (chosen = "pm25")
-{
-	createTablePm10();
-        return AQICalcPm10(form);
+console.log(num);
 }
-else if (chosen="pm10")
-{
-	createTable();
-        return AQICalc(form);
-}
-else if (chosen="no2")
-{
-	createTable();
-        return AQICalc(form);
-}
-else (chosen="so2")
-{
-	createTable();
-        return AQICalc(form);
-}	
-
-}
-
 
 function removeTable()
 {
@@ -91,6 +80,7 @@ Table.innerHTML = "";
 <h1>AQI Calculator</h1>
 <p>Choose the variable</p>
 <form>
+<div class="btn-group" data-toggle="buttons-radio">
 <label class="radio-inline">
 <input id= "rectButton" type="radio" name="optradio">PM2.5
 </label>
@@ -103,6 +93,7 @@ Table.innerHTML = "";
 <label class="radio-inline">
 <input id= "rectButton3" type="radio" name="optradio">SO2
 </label>
+</div>
 </form>
 <form name="form" id="form">
 <table style="padding-bottom:5px">
@@ -117,7 +108,7 @@ Table.innerHTML = "";
 <input size="3" name="inputbox" style="text-align: center; background-color: white;" value="78"></center></td>
 <th>
 <center>
-<input onclick="calculate(chosen)" size="10" value="Calculate" name="Calculate" type="button"> </center></th>
+<input onclick="calculate()" size="10" value="Calculate" name="Calculate" type="button"> </center></th>
 <th>
 <center>
 <input onclick="removeTable()" value="Reset" name="reset" type="reset"></center></th></tr></tbody></table>
