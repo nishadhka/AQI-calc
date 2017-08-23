@@ -84,12 +84,12 @@ sno,alpha,country,contr,tableno,variables,AQIhigh,AQIlow,Conchigh,Conclow,adviso
 1,a,IND,India,2,PM25,400,301,249,120,Severe,#ff0000
 1,a,IND,India,2,PM25,500,401,999,250,Severe,#ff0000
 13,m,US,United States,7,PM25,50,0,12,0,Good,#00b050
-13,m,US,United States,7,PM25,100,51,35.4,12.1,Moderate,#ffff00
-13,m,US,United States,7,PM25,150,101,55.4,35.5,Unhealthy for sensitive groups,#fc8004
-13,m,US,United States,7,PM25,200,151,150.4,55.5,Unhealthy,#ff0000
-13,m,US,United States,7,PM25,300,201,250.4,150.5,Very Unhealthy,#9e004f
-13,m,US,United States,7,PM25,400,301,350.4,250.5,Hazardous,#851911
-13,m,US,United States,7,PM25,500,401,500.4,350.5,Hazardous,#851911
+13,m,US,United States,7,PM25,100,51,35,12,Moderate,#ffff00
+13,m,US,United States,7,PM25,150,101,55,36,Unhealthy for sensitive groups,#fc8004
+13,m,US,United States,7,PM25,200,151,150,56,Unhealthy,#ff0000
+13,m,US,United States,7,PM25,300,201,250,151,Very Unhealthy,#9e004f
+13,m,US,United States,7,PM25,400,301,350,251,Hazardous,#851911
+13,m,US,United States,7,PM25,500,401,500,351,Hazardous,#851911
 2,b,CN,China,3,PM25,35,0,34,0,Good,#00b050
 2,b,CN,China,3,PM25,75,36,74,35,Moderate,#ffff00
 2,b,CN,China,3,PM25,115,76,114,75,Lightly Polluted,#fc8004
@@ -102,18 +102,18 @@ sno,alpha,country,contr,tableno,variables,AQIhigh,AQIlow,Conchigh,Conclow,adviso
 3,c,EU,European Union,4,PM25,30,21,39,30,Medium,#ffff00
 3,c,EU,European Union,4,PM25,60,31,59,40,High,#fc8004
 3,c,EU,European Union,4,PM25,100,61,999,60,Very High,#a20000
-14,d,JP,Japan,8,PM25,10,0,19,0,,#0070c0
-14,d,JP,Japan,8,PM25,15,11,29,20,,#00b0f0
-14,d,JP,Japan,8,PM25,35,16,39,30,,#08f963
-14,d,JP,Japan,8,PM25,50,36,49,40,,#ffff00
-14,d,JP,Japan,8,PM25,70,51,69,50,,#ff9900
-14,d,JP,Japan,8,PM25,100,71,999,70,,#ff3300
+14,d,JP,Japan,8,PM25,10,0,19,0,No adivisory,#0070c0
+14,d,JP,Japan,8,PM25,15,11,29,20,No adivisory,#00b0f0
+14,d,JP,Japan,8,PM25,35,16,39,30,No adivisory,#08f963
+14,d,JP,Japan,8,PM25,50,36,49,40,No adivisory,#ffff00
+14,d,JP,Japan,8,PM25,70,51,69,50,No adivisory,#ff9900
+14,d,JP,Japan,8,PM25,100,71,999,70,No adivisory,#ff3300
 7,g,LK,Sri Lanka,5,PM25,12,0,19,0,Good,#00b050
-7,g,LK,Sri Lanka,5,PM25,34.4,13,49,20,Moderate,#ffff00
-7,g,LK,Sri Lanka,5,PM25,55.4,34.5,79,50,Unhealthy for sensitive Groups,#ff66ff
-7,g,LK,Sri Lanka,5,PM25,150.4,55.5,149,80,Unhealthy,#ff0000
-7,g,LK,Sri Lanka,5,PM25,250.4,150.5,249,150,Very Unhealthy,#9e004f
-7,g,LK,Sri Lanka,5,PM25,500,250.5,500,250,Hazardous,#851911
+7,g,LK,Sri Lanka,5,PM25,34,13,49,20,Moderate,#ffff00
+7,g,LK,Sri Lanka,5,PM25,55,35,79,50,Unhealthy for sensitive Groups,#ff66ff
+7,g,LK,Sri Lanka,5,PM25,150,56,149,80,Unhealthy,#ff0000
+7,g,LK,Sri Lanka,5,PM25,250,151,249,150,Very Unhealthy,#9e004f
+7,g,LK,Sri Lanka,5,PM25,500,251,500,250,Hazardous,#851911
 12,l,UK,United Kingdom,6,PM25,23,0,22,0,Low,#08ff08
 12,l,UK,United Kingdom,6,PM25,53,24,52,23,Moderate,#ffc000
 12,l,UK,United Kingdom,6,PM25,70,54,69,53,High,#a20000
@@ -139,14 +139,14 @@ sno,alpha,country,contr,tableno,variables,AQIhigh,AQIlow,Conchigh,Conclow,adviso
 4,d,HK,Hong Kong,4,SO2,300,201,799,350,Very High,#ff0000
 4,d,HK,Hong Kong,4,SO2,400,301,2619,800,Severe,#00000
 4,d,HK,Hong Kong,4,SO2,500,401,9999,2620,Severe,#00000
-7,g,LK,Sri Lanka,5,SO2,50,0,88.94,0,Good,#00b050
-7,g,LK,Sri Lanka,5,SO2,100,51,376.7,89,Moderate,#ffff00
-7,g,LK,Sri Lanka,5,SO2,200,101,585.98,377,Unhealthy for sensitive Groups,#ff66ff
-7,g,LK,Sri Lanka,5,SO2,300,201,795.26,586,Unhealthy,#ff0000
-7,g,LK,Sri Lanka,5,SO2,400,301,1580.26,796,Very Unhealthy,#9e004f
-7,g,LK,Sri Lanka,5,SO2,500,401,2626.46,1581,Hazardous,#851911
-8,h,MY,Malyasia,6,SO2,50,0,52.5,0,Good,#0000ff
-8,h,MY,Malyasia,6,SO2,100,51,105,52.6,Moderate,#00b050
+7,g,LK,Sri Lanka,5,SO2,50,0,88,0,Good,#00b050
+7,g,LK,Sri Lanka,5,SO2,100,51,376,89,Moderate,#ffff00
+7,g,LK,Sri Lanka,5,SO2,200,101,585,377,Unhealthy for sensitive Groups,#ff66ff
+7,g,LK,Sri Lanka,5,SO2,300,201,795,586,Unhealthy,#ff0000
+7,g,LK,Sri Lanka,5,SO2,400,301,1580,796,Very Unhealthy,#9e004f
+7,g,LK,Sri Lanka,5,SO2,500,401,2626,1581,Hazardous,#851911
+8,h,MY,Malyasia,6,SO2,50,0,52,0,Good,#0000ff
+8,h,MY,Malyasia,6,SO2,100,51,105,53,Moderate,#00b050
 8,h,MY,Malyasia,6,SO2,200,101,800,106,Unhealthy,#ffff00
 8,h,MY,Malyasia,6,SO2,300,201,1600,801,Very Unhealthy,#dd5800
 8,h,MY,Malyasia,6,SO2,400,301,9999,1601,Hazardous,#ff0000
