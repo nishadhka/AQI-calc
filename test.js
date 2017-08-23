@@ -1535,4 +1535,39 @@ return true;
 
 }
 
+function appendRow2() {
 
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+
+	row.insertCell(0).innerHTML = AQICategoryUS(b13);
+	row.insertCell(0).innerHTML = AQICategoryUK(b12);
+	row.insertCell(0).innerHTML = AQICategoryTH(b11);
+	row.insertCell(0).innerHTML = AQICategorySG(b10);
+	row.insertCell(0).innerHTML = AQICategoryPH(b9);
+	row.insertCell(0).innerHTML = AQICategoryMY(b8);
+	row.insertCell(0).innerHTML = AQICategoryLK(b7);
+	row.insertCell(0).innerHTML = AQICategoryKR(b6);
+	row.insertCell(0).innerHTML = AQICategoryIDN(b5);
+	row.insertCell(0).innerHTML = AQICategoryHK(b4);
+	row.insertCell(0).innerHTML = AQICategoryEU(b3);
+	row.insertCell(0).innerHTML = AQICategoryCN(b2);
+	row.insertCell(0).innerHTML = AQICategoryIND(b1);
+        row.insertCell(0).innerHTML = "AQI Advisory";
+}
+
+return true;
+        
+
+}
