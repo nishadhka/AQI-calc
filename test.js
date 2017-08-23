@@ -7,9 +7,11 @@ function createTable() {
         var header = table.createTHead();
 
         var th0 = table.tHead.appendChild(document.createElement("th"));
-        th0.innerHTML = "AQI";
+        th0.innerHTML = "Country";
         var th1 = table.tHead.appendChild(document.createElement("th"));
-        th1.innerHTML = "AQI CAT";
+        th1.innerHTML = "India";
+        var th13 = table.tHead.appendChild(document.createElement("th"));
+        th13.innerHTML = "US";
 }
 
 function Linear(AQIhigh, AQIlow, Conchigh, Conclow, Concentration)
@@ -22,6 +24,68 @@ linear=Math.round(a);
 return linear;
 }
 
+function AQIPM10IND(Concentration) 
+ { 
+ var Conc=parseFloat(Concentration); 
+ var c; 
+ var AQI; 
+ c=Math.floor(Conc);           
+ if (c>=0.0 && c<99.0) 
+ { 
+ AQI=Linear(100.0,0.0,99.0,0.0,c); 
+ } 
+else if (c>=100.0 && c<149.0) 
+ { 
+ AQI=Linear(150.0,101.0,149.0,100.0,c); 
+ } 
+ else if (c>=150.0 && c<349.0) 
+ { 
+ AQI=Linear(350.0,151.0,349.0,150.0,c); 
+ } 
+ else if (c>=350.0 && c<419.0) 
+ { 
+ AQI=Linear(420.0,351.0,419.0,350.0,c); 
+ } 
+ else if (c>=420.0 && c<999.0) 
+ { 
+ AQI=Linear(500.0,421.0,999.0,420.0,c); 
+ } 
+ else 
+ { 
+ AQI="Out of Range"; 
+ } 
+ return AQI; 
+ }
+function AQICategoryIND(AQIndex) 
+ { 
+ var AQI=parseFloat(AQIndex); 
+ var AQICategoryIND;           
+ if (AQI<=99.0) 
+ { 
+ AQICategoryIND="Good"; 
+ } 
+else if (AQI>101.0 && AQI<=150.0) 
+ { 
+ AQICategoryIND="Medium"; 
+ } 
+ else if (AQI>151.0 && AQI<=350.0) 
+ { 
+ AQICategoryIND="Poor"; 
+ } 
+ else if (AQI>351.0 && AQI<=420.0) 
+ { 
+ AQICategoryIND="Very Poor"; 
+ } 
+ else if (AQI>421.0 && AQI<=500.0) 
+ { 
+ AQICategoryIND="Severe"; 
+ } 
+ else 
+ { 
+ AQICategoryIND="Out of Range"; 
+ } 
+ return AQICategoryIND; 
+ }
 function AQIPM10US(Concentration) 
  { 
  var Conc=parseFloat(Concentration); 
@@ -62,50 +126,48 @@ else if (c>=55.0 && c<154.0)
  } 
  return AQI; 
  }
-    
-    
-function AQICategoryUS(AQIndex)
-{
-var AQI=parseFloat(AQIndex)
-var AQICategoryUS;
-if (AQI<=50)
-{
-	AQICategoryUS="Good";
-}
-else if (AQI>50 && AQI<=100)
-{
-	AQICategoryUS="Moderate";
-}
-else if (AQI>100 && AQI<=150)
-{
-	AQICategoryUS="Unhealthy for Sensitive Groups";
-}
-else if (AQI>150 && AQI<=200)
-{
-	AQICategoryUS="Unhealthy";
-}
-else if (AQI>200 && AQI<=300)
-{
-	AQICategoryUS="Very Unhealthy";
-}
-else if (AQI>300 && AQI<=400)
-{
-	AQICategoryUS="Hazardous";
-}
-else if (AQI>400 && AQI<=500)
-{
-	AQICategoryUS="Hazardous";
-}
-else
-{
-	AQICategoryUS="Out of Range";
-}
-return AQICategoryUS;
-}
-
+function AQICategoryUS(AQIndex) 
+ { 
+ var AQI=parseFloat(AQIndex); 
+ var AQICategoryUS;           
+ if (AQI<=54.0) 
+ { 
+ AQICategoryUS="Good"; 
+ } 
+else if (AQI>51.0 && AQI<=100.0) 
+ { 
+ AQICategoryUS="Moderate"; 
+ } 
+ else if (AQI>101.0 && AQI<=150.0) 
+ { 
+ AQICategoryUS="Unhealthy for sensitive Groups"; 
+ } 
+ else if (AQI>151.0 && AQI<=200.0) 
+ { 
+ AQICategoryUS="Unhealthy"; 
+ } 
+ else if (AQI>201.0 && AQI<=300.0) 
+ { 
+ AQICategoryUS="Very Unhealthy"; 
+ } 
+ else if (AQI>301.0 && AQI<=400.0) 
+ { 
+ AQICategoryUS="Hazardous"; 
+ } 
+ else if (AQI>401.0 && AQI<=500.0) 
+ { 
+ AQICategoryUS="Hazardous"; 
+ } 
+ else 
+ { 
+ AQICategoryUS="Out of Range"; 
+ } 
+ return AQICategoryUS; 
+ }
 
 
 var b1;
+var b13;
 function AQICalcPm10(form)
 {
 
@@ -118,7 +180,8 @@ console.log(f)
 
 document.form.inputbox.style.textAlign="center";
 document.form.inputbox.style.backgroundColor="white";
-b1=AQIPM10US(f);	
+b1=AQIPM10IND(f);
+b13=AQIPM10US(f);	
 //console.log(b1)
 
 }
@@ -139,9 +202,10 @@ else
 	
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
-
-        row.insertCell(0).innerHTML = b1;
-        row.insertCell(1).innerHTML = AQICategoryUS(b1);
+        
+        row.insertCell(0).innerHTML = "AQI";
+        row.insertCell(1).innerHTML = b1;
+        row.insertCell(2).innerHTML = b13;
          
 
 
@@ -169,9 +233,9 @@ else
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
 
-        row.insertCell(0).innerHTML = b1;
-        row.insertCell(1).innerHTML = AQICategoryUS(b1);
-         
+        row.insertCell(0).innerHTML = "AQI advisory";
+        row.insertCell(1).innerHTML = AQICategoryIND(b1);
+        row.insertCell(2).innerHTML = AQICategoryUS(b13);
 
 
 }
@@ -197,8 +261,10 @@ else
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
 
-	row.insertCell(0).innerHTML = "i want to change my cell color";
+	row.insertCell(0).innerHTML = "AQI colour";
         row.insertCell(1).style.backgroundColor = "yellow";   
+        row.insertCell(1).style.backgroundColor = "yellow";   
+   
          
 
 
