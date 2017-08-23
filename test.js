@@ -1550,21 +1550,20 @@ else
 	
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
-
-	row.insertCell(0).innerHTML = AQICategoryUS(b13);
-	row.insertCell(0).innerHTML = AQICategoryUK(b12);
-	row.insertCell(0).innerHTML = AQICategoryTH(b11);
-	row.insertCell(0).innerHTML = AQICategorySG(b10);
-	row.insertCell(0).innerHTML = AQICategoryPH(b9);
-	row.insertCell(0).innerHTML = AQICategoryMY(b8);
-	row.insertCell(0).innerHTML = AQICategoryLK(b7);
-	row.insertCell(0).innerHTML = AQICategoryKR(b6);
-	row.insertCell(0).innerHTML = AQICategoryIDN(b5);
-	row.insertCell(0).innerHTML = AQICategoryHK(b4);
-	row.insertCell(0).innerHTML = AQICategoryEU(b3);
-	row.insertCell(0).innerHTML = AQICategoryCN(b2);
-	row.insertCell(0).innerHTML = AQICategoryIND(b1);
-        row.insertCell(0).innerHTML = "AQI Advisory";
+        row.insertCell(0).style.backgroundColor = AQIcolorUS(b13);
+	row.insertCell(0).style.backgroundColor = AQIcolorUK(b12);
+	row.insertCell(0).style.backgroundColor = AQIcolorTH(b11);
+	row.insertCell(0).style.backgroundColor = AQIcolorSG(b10);
+	row.insertCell(0).style.backgroundColor = AQIcolorPH(b9);
+	row.insertCell(0).style.backgroundColor = AQIcolorMY(b8);
+	row.insertCell(0).style.backgroundColor = AQIcolorLK(b7);
+	row.insertCell(0).style.backgroundColor = AQIcolorKR(b6);
+	row.insertCell(0).style.backgroundColor = AQIcolorIDN(b5);
+	row.insertCell(0).style.backgroundColor = AQIcolorHK(b4);
+	row.insertCell(0).style.backgroundColor = AQIcolorEU(b3);
+	row.insertCell(0).style.backgroundColor = AQIcolorCN(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorIND(b1);
+        row.insertCell(0).innerHTML = "AQI colour";
 }
 
 return true;
