@@ -41,29 +41,29 @@ function AQINO2IND(Concentration)
  var c; 
  var AQI; 
  c=Math.floor(Conc);           
- if (c>=0 && c<40) 
+ if (c>=0.0 && c<=40.0) 
  { 
- AQI=Linear(50,0,40,0,c); 
+ AQI=Linear(50.0,0.0,40.0,0.0,c); 
  } 
-else if (c>=41 && c<80) 
+else if (c>=41.0 && c<=80.0) 
  { 
- AQI=Linear(100,51,80,41,c); 
+ AQI=Linear(100.0,51.0,80.0,41.0,c); 
  } 
- else if (c>=81 && c<180) 
+ else if (c>=81.0 && c<=180.0) 
  { 
- AQI=Linear(200,101,180,81,c); 
+ AQI=Linear(200.0,101.0,180.0,81.0,c); 
  } 
- else if (c>=181 && c<280) 
+ else if (c>=181.0 && c<=280.0) 
  { 
- AQI=Linear(300,201,280,181,c); 
+ AQI=Linear(300.0,201.0,280.0,181.0,c); 
  } 
- else if (c>=281 && c<400) 
+ else if (c>=281.0 && c<=400.0) 
  { 
- AQI=Linear(400,301,400,281,c); 
+ AQI=Linear(400.0,301.0,400.0,281.0,c); 
  } 
- else if (c>=401 && c<999) 
+ else if (c>=401.0 && c<=999.0) 
  { 
- AQI=Linear(500,401,999,401,c); 
+ AQI=Linear(500.0,401.0,999.0,401.0,c); 
  } 
  else 
  { 
@@ -75,27 +75,27 @@ function AQICategoryINDNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQICategoryINDNO2;
- if (AQI<=40) 
+ if (AQI<=50.0) 
  { 
  AQICategoryINDNO2="Good"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQICategoryINDNO2="Medium"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQICategoryINDNO2="Poor"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQICategoryINDNO2="Very Poor"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQICategoryINDNO2="Severe"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQICategoryINDNO2="Severe"; 
  } 
@@ -109,27 +109,27 @@ function AQIcolorINDNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQIcolorINDNO2;
- if (AQI<=40) 
+ if (AQI<=50.0) 
  { 
  AQIcolorINDNO2="#00b050"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQIcolorINDNO2="#ffff00"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQIcolorINDNO2="#00b0f0"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQIcolorINDNO2="#0000cc"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQIcolorINDNO2="#ff0000"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQIcolorINDNO2="#ff0000"; 
  } 
@@ -145,29 +145,29 @@ function AQINO2CN(Concentration)
  var c; 
  var AQI; 
  c=Math.floor(Conc);           
- if (c>=0 && c<40) 
+ if (c>=0.0 && c<=40.0) 
  { 
- AQI=Linear(50,0,40,0,c); 
+ AQI=Linear(50.0,0.0,40.0,0.0,c); 
  } 
-else if (c>=41 && c<80) 
+else if (c>=41.0 && c<=80.0) 
  { 
- AQI=Linear(100,51,80,41,c); 
+ AQI=Linear(100.0,51.0,80.0,41.0,c); 
  } 
- else if (c>=81 && c<180) 
+ else if (c>=81.0 && c<=180.0) 
  { 
- AQI=Linear(200,101,180,81,c); 
+ AQI=Linear(200.0,101.0,180.0,81.0,c); 
  } 
- else if (c>=181 && c<280) 
+ else if (c>=181.0 && c<=280.0) 
  { 
- AQI=Linear(300,201,280,181,c); 
+ AQI=Linear(300.0,201.0,280.0,181.0,c); 
  } 
- else if (c>=281 && c<565) 
+ else if (c>=281.0 && c<=565.0) 
  { 
- AQI=Linear(400,301,565,281,c); 
+ AQI=Linear(400.0,301.0,565.0,281.0,c); 
  } 
- else if (c>=566 && c<940) 
+ else if (c>=566.0 && c<=940.0) 
  { 
- AQI=Linear(500,401,940,566,c); 
+ AQI=Linear(500.0,401.0,940.0,566.0,c); 
  } 
  else 
  { 
@@ -179,27 +179,27 @@ function AQICategoryCNNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQICategoryCNNO2;
- if (AQI<=40) 
+ if (AQI<=50.0) 
  { 
  AQICategoryCNNO2="Good"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQICategoryCNNO2="Moderate"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQICategoryCNNO2="Lightly Polluted"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQICategoryCNNO2="Medially Polluted"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQICategoryCNNO2="Heavily Polluted"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQICategoryCNNO2="Severely Polluted"; 
  } 
@@ -213,27 +213,27 @@ function AQIcolorCNNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQIcolorCNNO2;
- if (AQI<=40) 
+ if (AQI<=50.0) 
  { 
  AQIcolorCNNO2="#00b050"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQIcolorCNNO2="#ffff00"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQIcolorCNNO2="#fc8004"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQIcolorCNNO2="#ff0000"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQIcolorCNNO2="#800080"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQIcolorCNNO2="#96001d"; 
  } 
@@ -249,29 +249,29 @@ function AQINO2HK(Concentration)
  var c; 
  var AQI; 
  c=Math.floor(Conc);           
- if (c>=0 && c<40) 
+ if (c>=0.0 && c<=40.0) 
  { 
- AQI=Linear(50,0,40,0,c); 
+ AQI=Linear(50.0,0.0,40.0,0.0,c); 
  } 
-else if (c>=41 && c<80) 
+else if (c>=41.0 && c<=80.0) 
  { 
- AQI=Linear(100,51,80,41,c); 
+ AQI=Linear(100.0,51.0,80.0,41.0,c); 
  } 
- else if (c>=81 && c<150) 
+ else if (c>=81.0 && c<=150.0) 
  { 
- AQI=Linear(200,101,150,81,c); 
+ AQI=Linear(200.0,101.0,150.0,81.0,c); 
  } 
- else if (c>=151 && c<280) 
+ else if (c>=151.0 && c<=280.0) 
  { 
- AQI=Linear(300,201,280,151,c); 
+ AQI=Linear(300.0,201.0,280.0,151.0,c); 
  } 
- else if (c>=281 && c<940) 
+ else if (c>=281.0 && c<=940.0) 
  { 
- AQI=Linear(400,301,940,281,c); 
+ AQI=Linear(400.0,301.0,940.0,281.0,c); 
  } 
- else if (c>=941 && c<9999) 
+ else if (c>=941.0 && c<=9999.0) 
  { 
- AQI=Linear(500,401,9999,941,c); 
+ AQI=Linear(500.0,401.0,9999.0,941.0,c); 
  } 
  else 
  { 
@@ -283,27 +283,27 @@ function AQICategoryHKNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQICategoryHKNO2;
- if (AQI<=40) 
+ if (AQI<=50.0) 
  { 
  AQICategoryHKNO2="Low"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQICategoryHKNO2="Medium"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQICategoryHKNO2="High"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQICategoryHKNO2="Very High"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQICategoryHKNO2="Severe"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQICategoryHKNO2="Severe"; 
  } 
@@ -317,27 +317,27 @@ function AQIcolorHKNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQIcolorHKNO2;
- if (AQI<=40) 
+ if (AQI<=50.0) 
  { 
  AQIcolorHKNO2="#00b050"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQIcolorHKNO2="#00b0f0"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQIcolorHKNO2="#ffff00"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQIcolorHKNO2="#ff0000"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQIcolorHKNO2="#00000"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQIcolorHKNO2="#00000"; 
  } 
@@ -353,25 +353,25 @@ function AQINO2MY(Concentration)
  var c; 
  var AQI; 
  c=Math.floor(Conc);           
- if (c>=0 && c<160) 
+ if (c>=0.0 && c<=160.0) 
  { 
- AQI=Linear(50,0,160,0,c); 
+ AQI=Linear(50.0,0.0,160.0,0.0,c); 
  } 
-else if (c>=161 && c<320) 
+else if (c>=161.0 && c<=320.0) 
  { 
- AQI=Linear(100,51,320,161,c); 
+ AQI=Linear(100.0,51.0,320.0,161.0,c); 
  } 
- else if (c>=321 && c<1130) 
+ else if (c>=321.0 && c<=1130.0) 
  { 
- AQI=Linear(200,101,1130,321,c); 
+ AQI=Linear(200.0,101.0,1130.0,321.0,c); 
  } 
- else if (c>=1131 && c<2260) 
+ else if (c>=1131.0 && c<=2260.0) 
  { 
- AQI=Linear(300,201,2260,1131,c); 
+ AQI=Linear(300.0,201.0,2260.0,1131.0,c); 
  } 
- else if (c>=2261 && c<9999) 
+ else if (c>=2261.0 && c<=9999.0) 
  { 
- AQI=Linear(400,301,9999,2261,c); 
+ AQI=Linear(400.0,301.0,9999.0,2261.0,c); 
  } 
  else 
  { 
@@ -383,23 +383,23 @@ function AQICategoryMYNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQICategoryMYNO2;
- if (AQI<=160) 
+ if (AQI<=50.0) 
  { 
  AQICategoryMYNO2="Good"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQICategoryMYNO2="Moderate"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQICategoryMYNO2="Unhealthy"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQICategoryMYNO2="Very Unhealthy"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQICategoryMYNO2="Hazardous"; 
  } 
@@ -413,23 +413,23 @@ function AQIcolorMYNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQIcolorMYNO2;
- if (AQI<=160) 
+ if (AQI<=50.0) 
  { 
  AQIcolorMYNO2="#0000ff"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQIcolorMYNO2="#00b050"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQIcolorMYNO2="#ffff00"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQIcolorMYNO2="#dd5800"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQIcolorMYNO2="#ff0000"; 
  } 
@@ -445,29 +445,29 @@ function AQINO2TH(Concentration)
  var c; 
  var AQI; 
  c=Math.floor(Conc);           
- if (c>=0 && c<160) 
+ if (c>=0.0 && c<=160.0) 
  { 
- AQI=Linear(50,0,160,0,c); 
+ AQI=Linear(50.0,0.0,160.0,0.0,c); 
  } 
-else if (c>=161 && c<320) 
+else if (c>=161.0 && c<=320.0) 
  { 
- AQI=Linear(100,51,320,161,c); 
+ AQI=Linear(100.0,51.0,320.0,161.0,c); 
  } 
- else if (c>=321 && c<1130) 
+ else if (c>=321.0 && c<=1130.0) 
  { 
- AQI=Linear(200,101,1130,321,c); 
+ AQI=Linear(200.0,101.0,1130.0,321.0,c); 
  } 
- else if (c>=1131 && c<2260) 
+ else if (c>=1131.0 && c<=2260.0) 
  { 
- AQI=Linear(300,201,2260,1131,c); 
+ AQI=Linear(300.0,201.0,2260.0,1131.0,c); 
  } 
- else if (c>=2261 && c<3750) 
+ else if (c>=2261.0 && c<=3750.0) 
  { 
- AQI=Linear(400,301,3750,2261,c); 
+ AQI=Linear(400.0,301.0,3750.0,2261.0,c); 
  } 
- else if (c>=3751 && c<9999) 
+ else if (c>=3751.0 && c<=9999.0) 
  { 
- AQI=Linear(500,401,9999,3751,c); 
+ AQI=Linear(500.0,401.0,9999.0,3751.0,c); 
  } 
  else 
  { 
@@ -479,27 +479,27 @@ function AQICategoryTHNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQICategoryTHNO2;
- if (AQI<=160) 
+ if (AQI<=50.0) 
  { 
  AQICategoryTHNO2="Good"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQICategoryTHNO2="Moderate"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQICategoryTHNO2="Unhealthy"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQICategoryTHNO2="Very Unhealthful"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQICategoryTHNO2="Hazardous"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQICategoryTHNO2="Hazardous"; 
  } 
@@ -513,27 +513,27 @@ function AQIcolorTHNO2(AQIndex)
  { 
  var AQI=parseFloat(AQIndex); 
  var AQIcolorTHNO2;
- if (AQI<=160) 
+ if (AQI<=50.0) 
  { 
  AQIcolorTHNO2="#66ffcc"; 
  } 
-else if (AQI>51 && AQI<=100) 
+else if (AQI>=51.0 && AQI<=100.0) 
  { 
  AQIcolorTHNO2="#00b050"; 
  } 
- else if (AQI>101 && AQI<=200) 
+ else if (AQI>=101.0 && AQI<=200.0) 
  { 
  AQIcolorTHNO2="#ffff00"; 
  } 
- else if (AQI>201 && AQI<=300) 
+ else if (AQI>=201.0 && AQI<=300.0) 
  { 
  AQIcolorTHNO2="#fc8004"; 
  } 
- else if (AQI>301 && AQI<=400) 
+ else if (AQI>=301.0 && AQI<=400.0) 
  { 
  AQIcolorTHNO2="#ff0000"; 
  } 
- else if (AQI>401 && AQI<=500) 
+ else if (AQI>=401.0 && AQI<=500.0) 
  { 
  AQIcolorTHNO2="#ff0000"; 
  } 
