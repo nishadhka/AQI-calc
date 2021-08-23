@@ -18,9 +18,9 @@
 <meta name="keywords" content="AIRNOW,air pollution,air quality,OAR,OAQPS,pollutant,air quality forecasts,Air Quality Index,AQI,ozone,pollution,ozone 																															 maps,mapping,ozone animation,Ozone Action Days,smog,visibility,peak ozone level,air,polution,forecasting,forecast,programs,
  web cams,monitoring,Real Time Data,particle,PM2.5,EPA,Environmental Protection Agency,EnviroFlash,Air Quality Email, 
  Particle Pollution, Particle maps">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="libs/bootstrap.min.css">
+<script src="libs/jquery.min.js"></script>
+<script src="libs/bootstrap.min.js"></script>
 <script src="pm10.js"></script>
 <script src="pm25.js"></script>
 <script src="so2.js"></script>
@@ -31,6 +31,10 @@
             max-width:  95px;
             word-wrap: break-word;
             }
+           .centerBlock {
+  		display: table;
+  		margin: auto;
+	    }
 </style>
 </head>
 
@@ -57,6 +61,7 @@ AQICalcPm25(form)
 appendRowPm25()
 appendRow1Pm25()
 appendRow2Pm25()
+appendRow3Pm25()
 }
 
 if (chosen ==2){
@@ -67,6 +72,10 @@ AQICalcPm10(form)
 appendRowPm10()
 appendRow1Pm10()
 appendRow2Pm10()
+appendRow3Pm10()
+appendRow4Pm10()
+appendRow5Pm10()
+appendRow6Pm10()
 }
 
 if (chosen ==3){
@@ -88,6 +97,7 @@ AQICalcSo2(form)
 appendRowSo2()
 appendRow1So2()
 appendRow2So2()
+appendRow3So2()
 }
 }
 
@@ -101,10 +111,25 @@ Table.innerHTML = "";
 
 </script>
 
-<div class="container">
-<h1>AQI Calculator</h1>
-<p>Choose the variable</p>
-<form>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4"><div class="centerBlock"><h1>AQI calculate and compare</h1></div></div>
+  <div class="col-sm-4"></div>
+</div> 
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4"><h4>Intro text on aqi calculate and compar</h4> </div>
+  <div class="col-sm-4"></div>
+</div> 
+
+
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-2">
+<h4><b>Choose the variable</b></h4>
+</div>
+<div class="col-sm-2">
 <div class="btn-group" data-toggle="buttons-radio">
 <label class="radio-inline">
 <input id= "rectButton" type="radio" value="1" name="optradio">PM2.5
@@ -115,33 +140,36 @@ Table.innerHTML = "";
 <label class="radio-inline">
 <input id= "rectButton2" type="radio" value="3" name="optradio">NO2
 </label>
-<label class="radio-inline active">
+<label class="radio-inline">
 <input checked id= "rectButton3" type="radio" value="4" name="optradio">SO2
 </label>
 </div>
-</form>
+</div>
+<div class="col-sm-4"></div>
+</div>    
+    
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-2">
+<h4><b>Enter the concentration</b></h4>
+</div>
+<div class="col-sm-2">
 <form name="form" id="form">
-<table style="padding-bottom:5px">
-<tbody>
-<tr>
-</tr>
-<tr>
-<th colspan="0">
-<center>Enter the Concentration:</center></th>
-<td>
-<center>
-<input size="3" name="inputbox" style="text-align: center; background-color: white;" value="78"></center></td>
-<th>
-<center>
-<input onclick="calculate()" size="10" value="Calculate" name="Calculate" type="button"> </center></th>
-<th>
-<center>
-<input onclick="removeTable()" value="Reset" name="reset" type="reset"></center></th></tr></tbody></table>
+<input size="3" name="inputbox" style="text-align: center; background-color: white;" value="78">
+<input onclick="calculate()" size="10" value="Calculate" name="Calculate" type="button">
+<input onclick="removeTable()" value="Reset" name="reset" type="reset">
 </form>
 </div>
+<div class="col-sm-4"></div>
+</div> 
 
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-4">   
 <div class="showtablePm10" id="tablePrint1"> </div>
-
+</div>
+<div class="col-sm-4"></div>
+</div> 
 
 </body>
 </html>

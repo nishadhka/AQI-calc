@@ -2,22 +2,27 @@ function createTableNo2() {
         var myTableDiv = document.getElementById("tablePrint1");  //indiv
         table = document.createElement("TABLE");   //TABLE??
         table.setAttribute("id", "data");
-        table.border = '1';
+        table.setAttribute("class", "table table-striped");
+        //table.border = '1';
         myTableDiv.appendChild(table);  //appendChild() insert it in the document (table --> myTableDiv)
         var header = table.createTHead();
 
         var th0 = table.tHead.appendChild(document.createElement("th"));
-        th0.innerHTML = "Country";
+        th0.innerHTML = "Method";
  var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "India"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "China"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Hong Kong"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Malyasia"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Thailand"
+ th1.innerHTML = "Value"
+var th2 = table.tHead.appendChild(document.createElement("th")); 
+ th2.innerHTML = "Category"
+var th3 = table.tHead.appendChild(document.createElement("th")); 
+ th3.innerHTML = "Color code"
+var th4 = table.tHead.appendChild(document.createElement("th")); 
+ th4.innerHTML = "Color code"
+var th5 = table.tHead.appendChild(document.createElement("th")); 
+ th5.innerHTML = "Category"
+var th6 = table.tHead.appendChild(document.createElement("th")); 
+ th6.innerHTML = "Value"
+var th7 = table.tHead.appendChild(document.createElement("th")); 
+ th7.innerHTML = "Method"
 }
 
 function Linear(AQIhigh, AQIlow, Conchigh, Conclow, Concentration)
@@ -219,7 +224,7 @@ function AQIcolorCNNO2(AQIndex)
  } 
 else if (AQI>=51.0 && AQI<=100.0) 
  { 
- AQIcolorCNNO2="#ffff00"; 
+ AQIcolorCNNO2="#ffff00"; AQICategoryCNNO2
  } 
  else if (AQI>=101.0 && AQI<=200.0) 
  { 
@@ -597,13 +602,14 @@ else
         var row = table.insertRow(rowCount);
         
         
-
-	row.insertCell(0).innerHTML = b5;
-	row.insertCell(0).innerHTML = b4;
-	row.insertCell(0).innerHTML = b3;
+        row.insertCell(0).innerHTML = "China";
 	row.insertCell(0).innerHTML = b2;
-	row.insertCell(0).innerHTML = b1;
-        row.insertCell(0).innerHTML = "AQI";
+	row.insertCell(0).innerHTML = AQICategoryCNNO2(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorCNNO2(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorINDNO2(b1);
+	row.insertCell(0).innerHTML = AQICategoryINDNO2(b1);
+        row.insertCell(0).innerHTML = b1;
+        row.insertCell(0).innerHTML = "India";
         
  
 }
@@ -632,12 +638,14 @@ else
 
 
 
-	row.insertCell(0).innerHTML = AQICategoryTHNO2(b5);
+	row.insertCell(0).innerHTML = "Malyasia";
+	row.insertCell(0).innerHTML = b4;
 	row.insertCell(0).innerHTML = AQICategoryMYNO2(b4);
+	row.insertCell(0).style.backgroundColor = AQIcolorMYNO2(b4);
+	row.insertCell(0).style.backgroundColor = AQIcolorHKNO2(b3);
 	row.insertCell(0).innerHTML = AQICategoryHKNO2(b3);
-	row.insertCell(0).innerHTML = AQICategoryCNNO2(b2);
-	row.insertCell(0).innerHTML = AQICategoryINDNO2(b1);
-        row.insertCell(0).innerHTML = "AQI Advisory";
+        row.insertCell(0).innerHTML = b3;
+        row.insertCell(0).innerHTML = "Hong Kong";
 }
 
 return true;
@@ -661,12 +669,14 @@ else
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
       
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
 	row.insertCell(0).style.backgroundColor = AQIcolorTHNO2(b5);
-	row.insertCell(0).style.backgroundColor = AQIcolorMYNO2(b4);
-	row.insertCell(0).style.backgroundColor = AQIcolorHKNO2(b3);
-	row.insertCell(0).style.backgroundColor = AQIcolorCNNO2(b2);
-	row.insertCell(0).style.backgroundColor = AQIcolorINDNO2(b1);
-        row.insertCell(0).innerHTML = "AQI colour";
+	row.insertCell(0).innerHTML = AQICategoryTHNO2(b5);
+        row.insertCell(0).innerHTML = b5;
+        row.insertCell(0).innerHTML = "Thailand";
 }
 
 return true;

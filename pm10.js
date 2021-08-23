@@ -2,38 +2,27 @@ function createTablePm10() {
         var myTableDiv = document.getElementById("tablePrint1");  //indiv
         table = document.createElement("TABLE");   //TABLE??
         table.setAttribute("id", "data");
-        table.border = '1';
+	table.setAttribute("class", "table table-striped");
+        //table.border = '1';
         myTableDiv.appendChild(table);  //appendChild() insert it in the document (table --> myTableDiv)
         var header = table.createTHead();
 
         var th0 = table.tHead.appendChild(document.createElement("th"));
-        th0.innerHTML = "Country";
+        th0.innerHTML = "Method";
  var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "India"
+ th1.innerHTML = "Value"
 var th2 = table.tHead.appendChild(document.createElement("th")); 
- th2.innerHTML = "China"
+ th2.innerHTML = "Category"
 var th3 = table.tHead.appendChild(document.createElement("th")); 
- th3.innerHTML = "European Union"
+ th3.innerHTML = "Color code"
 var th4 = table.tHead.appendChild(document.createElement("th")); 
- th4.innerHTML = "Hong Kong"
+ th4.innerHTML = "Color code"
 var th5 = table.tHead.appendChild(document.createElement("th")); 
- th5.innerHTML = "Indonesia"
+ th5.innerHTML = "Category"
 var th6 = table.tHead.appendChild(document.createElement("th")); 
- th6.innerHTML = "South Korea"
+ th6.innerHTML = "Value"
 var th7 = table.tHead.appendChild(document.createElement("th")); 
- th7.innerHTML = "Sri Lanka"
-var th8 = table.tHead.appendChild(document.createElement("th")); 
- th8.innerHTML = "Malyasia"
-var th9 = table.tHead.appendChild(document.createElement("th")); 
- th9.innerHTML = "Philippines"
-var th10 = table.tHead.appendChild(document.createElement("th")); 
- th10.innerHTML = "Singapore"
-var th11 = table.tHead.appendChild(document.createElement("th")); 
- th11.innerHTML = "Thailand"
-var th12 = table.tHead.appendChild(document.createElement("th")); 
- th12.innerHTML = "United Kingdom"
-var th13 = table.tHead.appendChild(document.createElement("th")); 
- th13.innerHTML = "United States"
+ th7.innerHTML = "Method"
 
 }
 
@@ -1456,6 +1445,7 @@ console.log(b13)
 }
 
 
+
 function appendRowPm10() {
 
         if (b1 == "Out of Range")
@@ -1473,20 +1463,14 @@ else
         var row = table.insertRow(rowCount);
         
         
-	row.insertCell(0).innerHTML = b13;
-	row.insertCell(0).innerHTML = b12;
-	row.insertCell(0).innerHTML = b11;
-	row.insertCell(0).innerHTML = b10;
-	row.insertCell(0).innerHTML = b9;
-	row.insertCell(0).innerHTML = b8;
-	row.insertCell(0).innerHTML = b7;
-	row.insertCell(0).innerHTML = b6;
-	row.insertCell(0).innerHTML = b5;
-	row.insertCell(0).innerHTML = b4;
-	row.insertCell(0).innerHTML = b3;
+	row.insertCell(0).innerHTML = "China";
 	row.insertCell(0).innerHTML = b2;
-	row.insertCell(0).innerHTML = b1;
-        row.insertCell(0).innerHTML = "AQI";
+	row.insertCell(0).innerHTML = AQICategoryCNPM10(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorCNPM10(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorINDPM10(b1);
+	row.insertCell(0).innerHTML = AQICategoryINDPM10(b1);
+        row.insertCell(0).innerHTML = b1;
+        row.insertCell(0).innerHTML = "India";
         
  
 }
@@ -1512,27 +1496,25 @@ else
 	
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
-
-	row.insertCell(0).innerHTML = AQICategoryUSPM10(b13);
-	row.insertCell(0).innerHTML = AQICategoryUKPM10(b12);
-	row.insertCell(0).innerHTML = AQICategoryTHPM10(b11);
-	row.insertCell(0).innerHTML = AQICategorySGPM10(b10);
-	row.insertCell(0).innerHTML = AQICategoryPHPM10(b9);
-	row.insertCell(0).innerHTML = AQICategoryMYPM10(b8);
-	row.insertCell(0).innerHTML = AQICategoryLKPM10(b7);
-	row.insertCell(0).innerHTML = AQICategoryKRPM10(b6);
-	row.insertCell(0).innerHTML = AQICategoryIDNPM10(b5);
+        
+        
+	row.insertCell(0).innerHTML = "Hong Kong";
+	row.insertCell(0).innerHTML = b4;
 	row.insertCell(0).innerHTML = AQICategoryHKPM10(b4);
+	row.insertCell(0).style.backgroundColor = AQIcolorCNPM10(b4);
+	row.insertCell(0).style.backgroundColor = AQIcolorINDPM10(b3);
 	row.insertCell(0).innerHTML = AQICategoryEUPM10(b3);
-	row.insertCell(0).innerHTML = AQICategoryCNPM10(b2);
-	row.insertCell(0).innerHTML = AQICategoryINDPM10(b1);
-        row.insertCell(0).innerHTML = "AQI Advisory";
+        row.insertCell(0).innerHTML = b3;
+        row.insertCell(0).innerHTML = "European Union";
+        
+ 
 }
 
 return true;
         
 
 }
+
 
 function appendRow2Pm10() {
 
@@ -1549,23 +1531,168 @@ else
 	
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
-        row.insertCell(0).style.backgroundColor = AQIcolorUSPM10(b13);
-	row.insertCell(0).style.backgroundColor = AQIcolorUKPM10(b12);
-	row.insertCell(0).style.backgroundColor = AQIcolorTHPM10(b11);
-	row.insertCell(0).style.backgroundColor = AQIcolorSGPM10(b10);
-	row.insertCell(0).style.backgroundColor = AQIcolorPHPM10(b9);
-	row.insertCell(0).style.backgroundColor = AQIcolorMYPM10(b8);
-	row.insertCell(0).style.backgroundColor = AQIcolorLKPM10(b7);
+        
+        
+	row.insertCell(0).innerHTML = "South Korea";
+	row.insertCell(0).innerHTML = b6;
+	row.insertCell(0).innerHTML = AQICategoryKRPM10(b6);
 	row.insertCell(0).style.backgroundColor = AQIcolorKRPM10(b6);
 	row.insertCell(0).style.backgroundColor = AQIcolorIDNPM10(b5);
-	row.insertCell(0).style.backgroundColor = AQIcolorHKPM10(b4);
-	row.insertCell(0).style.backgroundColor = AQIcolorEUPM10(b3);
-	row.insertCell(0).style.backgroundColor = AQIcolorCNPM10(b2);
-	row.insertCell(0).style.backgroundColor = AQIcolorINDPM10(b1);
-        row.insertCell(0).innerHTML = "AQI colour";
+	row.insertCell(0).innerHTML = AQICategoryIDNPM10(b5);
+        row.insertCell(0).innerHTML = b5;
+        row.insertCell(0).innerHTML = "Indonesia";
+        
+ 
 }
 
 return true;
         
 
 }
+
+
+
+function appendRow3Pm10() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        
+        
+	row.insertCell(0).innerHTML = "Malyasia";
+	row.insertCell(0).innerHTML = b8;
+	row.insertCell(0).innerHTML = AQICategoryMYPM10(b8);
+	row.insertCell(0).style.backgroundColor = AQIcolorMYPM10(b8);
+	row.insertCell(0).style.backgroundColor = AQIcolorLKPM10(b7);
+	row.insertCell(0).innerHTML = AQICategoryLKPM10(b7);
+        row.insertCell(0).innerHTML = b7;
+        row.insertCell(0).innerHTML = "Sri Lanka";
+        
+ 
+}
+
+return true;
+        
+
+}
+
+
+
+
+function appendRow4Pm10() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        
+        
+	row.insertCell(0).innerHTML = "Singapore";
+	row.insertCell(0).innerHTML = b10;
+	row.insertCell(0).innerHTML = AQICategorySGPM10(b10);
+	row.insertCell(0).style.backgroundColor = AQIcolorSGPM10(b10);
+	row.insertCell(0).style.backgroundColor = AQIcolorPHPM10(b9);
+	row.insertCell(0).innerHTML = AQICategoryPHPM10(b9);
+        row.insertCell(0).innerHTML = b9;
+        row.insertCell(0).innerHTML = "Philippines";
+        
+ 
+}
+
+return true;
+        
+
+}
+
+
+
+function appendRow5Pm10() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        
+        
+	row.insertCell(0).innerHTML = "United Kingdom";
+	row.insertCell(0).innerHTML = b12;
+	row.insertCell(0).innerHTML = AQICategoryUKPM10(b12);
+	row.insertCell(0).style.backgroundColor = AQIcolorUKPM10(b12);
+	row.insertCell(0).style.backgroundColor = AQIcolorTHPM10(b11);
+	row.insertCell(0).innerHTML = AQICategoryTHPM10(b11);
+        row.insertCell(0).innerHTML = b11;
+        row.insertCell(0).innerHTML = "Thailand";
+        
+ 
+}
+
+return true;
+        
+
+}
+
+
+
+
+function appendRow6Pm10() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        
+        
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).style.backgroundColor = "";
+	row.insertCell(0).style.backgroundColor = AQIcolorUSPM10(b13);
+	row.insertCell(0).innerHTML = AQICategoryUSPM10(b13);
+        row.insertCell(0).innerHTML = b13;
+        row.insertCell(0).innerHTML = "Thailand";
+        
+ 
+}
+
+return true;
+        
+
+}
+

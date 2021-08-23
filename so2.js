@@ -2,30 +2,27 @@ function createTableSo2() {
         var myTableDiv = document.getElementById("tablePrint1");  //indiv
         table = document.createElement("TABLE");   //TABLE??
         table.setAttribute("id", "data");
-        table.border = '1';
+        table.setAttribute("class", "table table-striped");
+        //table.border = '1';
         myTableDiv.appendChild(table);  //appendChild() insert it in the document (table --> myTableDiv)
         var header = table.createTHead();
 
-var th0 = table.tHead.appendChild(document.createElement("th"));
-        th0.innerHTML = "Country";
-       var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "India"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "China"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Hong Kong"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Sri Lanka"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Malyasia"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Philippines"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Singapore"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "Thailand"
-var th1 = table.tHead.appendChild(document.createElement("th")); 
- th1.innerHTML = "United States"
+       var th0 = table.tHead.appendChild(document.createElement("th"));
+        th0.innerHTML = "Method";
+ var th1 = table.tHead.appendChild(document.createElement("th")); 
+ th1.innerHTML = "Value"
+var th2 = table.tHead.appendChild(document.createElement("th")); 
+ th2.innerHTML = "Category"
+var th3 = table.tHead.appendChild(document.createElement("th")); 
+ th3.innerHTML = "Color code"
+var th4 = table.tHead.appendChild(document.createElement("th")); 
+ th4.innerHTML = "Color code"
+var th5 = table.tHead.appendChild(document.createElement("th")); 
+ th5.innerHTML = "Category"
+var th6 = table.tHead.appendChild(document.createElement("th")); 
+ th6.innerHTML = "Value"
+var th7 = table.tHead.appendChild(document.createElement("th")); 
+ th7.innerHTML = "Method"
 
 }
 
@@ -996,16 +993,14 @@ else
         
         
 	
-	row.insertCell(0).innerHTML = b9;
-	row.insertCell(0).innerHTML = b8;
-	row.insertCell(0).innerHTML = b7;
-	row.insertCell(0).innerHTML = b6;
-	row.insertCell(0).innerHTML = b5;
-	row.insertCell(0).innerHTML = b4;
-	row.insertCell(0).innerHTML = b3;
+	row.insertCell(0).innerHTML = "China";
 	row.insertCell(0).innerHTML = b2;
-	row.insertCell(0).innerHTML = b1;
-        row.insertCell(0).innerHTML = "AQI";
+	row.insertCell(0).innerHTML = AQICategoryCNSO2(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorCNSO2(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorINDSO2(b1);
+	row.insertCell(0).innerHTML = AQICategoryINDSO2(b1);
+        row.insertCell(0).innerHTML = b1;
+        row.insertCell(0).innerHTML = "India";
         
  
 }
@@ -1033,16 +1028,14 @@ else
         var row = table.insertRow(rowCount);
 
 	
-	row.insertCell(0).innerHTML = AQICategoryUSSO2(b9);
-	row.insertCell(0).innerHTML = AQICategoryTHSO2(b8);
-	row.insertCell(0).innerHTML = AQICategorySGSO2(b7);
-	row.insertCell(0).innerHTML = AQICategoryPHSO2(b6);
-	row.insertCell(0).innerHTML = AQICategoryMYSO2(b5);
-	row.insertCell(0).innerHTML = AQICategoryLKSO2(b4);
-	row.insertCell(0).innerHTML = AQICategoryHKSO2(b3);
-	row.insertCell(0).innerHTML = AQICategoryCNSO2(b2);
-	row.insertCell(0).innerHTML = AQICategoryINDSO2(b1);
-        row.insertCell(0).innerHTML = "AQI Advisory";
+	row.insertCell(0).innerHTML = "Sri Lanka";
+	row.insertCell(0).innerHTML = b4;
+	row.insertCell(0).innerHTML = AQICategoryLKSO2(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorLKSO2(b2);
+	row.insertCell(0).style.backgroundColor = AQIcolorHKSO2(b1);
+	row.insertCell(0).innerHTML = AQICategoryHKSO2(b1);
+        row.insertCell(0).innerHTML = b3;
+        row.insertCell(0).innerHTML = "Hong Kong";
 }
 
 return true;
@@ -1065,16 +1058,82 @@ else
 	
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
-	row.insertCell(0).style.backgroundColor = AQIcolorUSSO2(b9);
-	row.insertCell(0).style.backgroundColor = AQIcolorTHSO2(b8);
-	row.insertCell(0).style.backgroundColor = AQIcolorSGSO2(b7);
+	
+
+	row.insertCell(0).innerHTML = "Philippines";
+	row.insertCell(0).innerHTML = b6;
+	row.insertCell(0).innerHTML = AQICategoryPHSO2(b6);
 	row.insertCell(0).style.backgroundColor = AQIcolorPHSO2(b6);
 	row.insertCell(0).style.backgroundColor = AQIcolorMYSO2(b5);
-	row.insertCell(0).style.backgroundColor = AQIcolorLKSO2(b4);
-	row.insertCell(0).style.backgroundColor = AQIcolorHKSO2(b3);
-	row.insertCell(0).style.backgroundColor = AQIcolorCNSO2(b2);
-	row.insertCell(0).style.backgroundColor = AQIcolorINDSO2(b1);
-        row.insertCell(0).innerHTML = "AQI colour";
+	row.insertCell(0).innerHTML = AQICategoryMYSO2(b5);
+        row.insertCell(0).innerHTML = b5;
+        row.insertCell(0).innerHTML = "Malyasia";
+}
+
+return true;
+        
+
+}
+
+
+function appendRow3So2() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+	
+
+	row.insertCell(0).innerHTML = "Thailand";
+	row.insertCell(0).innerHTML = b8;
+	row.insertCell(0).innerHTML = AQICategoryTHSO2(b8);
+	row.insertCell(0).style.backgroundColor = AQIcolorTHSO2(b8);
+	row.insertCell(0).style.backgroundColor = AQIcolorSGSO2(b7);
+	row.insertCell(0).innerHTML = AQICategorySGSO2(b7);
+        row.insertCell(0).innerHTML = b7;
+        row.insertCell(0).innerHTML = "Singapore";
+}
+
+return true;
+        
+
+}
+
+
+function appendRow3So2() {
+
+        if (b1 == "Out of Range")
+{
+	alert("The concentration number you've entered is out of range for this pollutant.");
+	document.form.inputbox.value=" ";
+	document.form.outputbox1a.value=" ";
+	document.form.outputbox2a.value=" ";
+}
+
+else
+{
+	
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+	
+
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).innerHTML = "";
+	row.insertCell(0).style.backgroundColor = "";
+	row.insertCell(0).style.backgroundColor = AQIcolorUSSO2(b9);
+	row.insertCell(0).innerHTML = AQICategoryUSSO2(b9);
+        row.insertCell(0).innerHTML = b9;
+        row.insertCell(0).innerHTML = "Singapore";
 }
 
 return true;
